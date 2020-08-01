@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.muahangluon.live	TRUE	/	FALSE	1999999999	__cfduid	d1de6d3f19b283885eaadd2648baa1c1b1596248601
+muahangluon.live	TRUE	/	FALSE	1999999999	SameSite	Lax
+
