@@ -995,13 +995,13 @@
                 if (hashName !== '') {
                     var hash = window.location.hash;
                     if (hash === '') {
-                        window.location.href=lp_href;
+                        window.location.href='https://phongufm.github.io/thankyou-thai/';
                         return false;
                     }
                 }
             });
 
-            window.history.pushState('https://phongufm.github.io/thankyou-thai/'+ '#forward');
+            window.history.pushState('forward', null, location.search + '#forward');
         }
 
     });
