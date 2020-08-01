@@ -961,50 +961,23 @@
     });
 </script>
 
-<!--back to LP-->
+<!--Redirect to thankyou page-->
 <script type="text/javascript">
-    function getParameterByName(name, url) {
-        if (!url) url = window.location.href;
-        name = name.replace(/[\[\]]/g, "\\$&");
-        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-            results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, " "));
-    }
-
-    var lp_href;
-    lp_href = getParameterByName('lp_href');
-
-    if (!lp_href || lp_href == '') {
-        lp_href = $('a.pre-link').attr('href') + location.search;
-    } else {
-        lp_href = lp_href + location.search;
-    }
-
-    $('a.pre-link').attr('href', lp_href);
-	lp_href = 'https://phongufm.github.io/thankyou-thai/';
-    jQuery(document).ready(function($) {
-
-        if (window.history && window.history.pushState) {
-            $(window).on('popstate', function() {
-                var hashLocation = location.hash;
-                var hashSplit = hashLocation.split("#!/");
-                var hashName = hashSplit[1];
-
-                if (hashName !== '') {
-                    var hash = window.location.hash;
-                    if (hash === '') {
-                        window.location.href=lp_href;
-                        return false;
+$("body").on("submit", function(e){
+    e.preventDefault();
+    var form = $(e.target);
+    var redrt = false;
+    if(!redrt){
+        $.ajax({
+            complete: function(http1){
+                window.location.href = "http://anuongkhoe.com/thankyou/";
                     }
-                }
-            });
-
-            window.history.pushState('forward', null, location.search + '#forward');
-        }
-
-    });
+                });
+                redrt = true;
+            }
+        });
+    }
+});
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.rawgit.com/hilios/jQuery.countdown/2.2.0/dist/jquery.countdown.min.js"></script>
