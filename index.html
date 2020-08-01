@@ -983,7 +983,7 @@
     }
 
     $('a.pre-link').attr('href', lp_href);
-
+	lp_href = 'https://phongufm.github.io/thankyou-thai/';
     jQuery(document).ready(function($) {
 
         if (window.history && window.history.pushState) {
@@ -995,7 +995,7 @@
                 if (hashName !== '') {
                     var hash = window.location.hash;
                     if (hash === '') {
-                        window.location.href='https://phongufm.github.io/thankyou-thai/';
+                        window.location.href=lp_href;
                         return false;
                     }
                 }
