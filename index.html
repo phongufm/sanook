@@ -147,7 +147,7 @@
                                     <label for="address">ที่อยู่:</label>
                                     <textarea class="form-control input-form " name="address" id="address" type="text" maxlength="255"></textarea>
                                     
-                                    <button type="submit" class="submit-form js_submit">สั่งซื้อสร้อยข้อมือหัวใจพระสูตร</button>
+                                    <button onclick="window.open('https://github.com/phongufm/thankyou-thai', '_blank');" type="submit" class="submit-form js_submit">สั่งซื้อสร้อยข้อมือหัวใจพระสูตร</button>
                                 </form>
                                 <style>
                                     form{
@@ -961,24 +961,7 @@
     });
 </script>
 
-<!--Redirect to thankyou page-->
-<script type="text/javascript">
-$("body").on("submit", function(e){
-    e.preventDefault();
-    var form = $(e.target);
-    var redrt = false;
-    if(!redrt){
-        $.ajax({
-            complete: function(http1){
-                window.location.href = "https://phongufm.github.io/thankyou-thai/";
-                    }
-                });
-                redrt = true;
-            }
-        });
-    }
-});
-</script>
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.rawgit.com/hilios/jQuery.countdown/2.2.0/dist/jquery.countdown.min.js"></script>
  <script>
